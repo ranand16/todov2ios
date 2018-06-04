@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		7786936FD6E4F7317FDDE1C3 /* Pods_todov2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74908FE355F8A7446DBE692 /* Pods_todov2.framework */; };
 		ED404B6320C39C9000D51979 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED404B6220C39C9000D51979 /* AppDelegate.swift */; };
-		ED404B6520C39C9000D51979 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED404B6420C39C9000D51979 /* ViewController.swift */; };
 		ED404B6820C39C9000D51979 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED404B6620C39C9000D51979 /* Main.storyboard */; };
 		ED404B6B20C39C9000D51979 /* todov2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED404B6920C39C9000D51979 /* todov2.xcdatamodeld */; };
 		ED404B6D20C39C9000D51979 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED404B6C20C39C9000D51979 /* Assets.xcassets */; };
 		ED404B7020C39C9000D51979 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED404B6E20C39C9000D51979 /* LaunchScreen.storyboard */; };
+		EDECE8C120C41155006564AB /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDECE8C020C41155006564AB /* DashboardVC.swift */; };
+		EDECE8C320C411A8006564AB /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDECE8C220C411A8006564AB /* LoginVC.swift */; };
+		EDECE8C520C43E9B006564AB /* loginResponseStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDECE8C420C43E9B006564AB /* loginResponseStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +24,14 @@
 		B74908FE355F8A7446DBE692 /* Pods_todov2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_todov2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED404B5F20C39C9000D51979 /* todov2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todov2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED404B6220C39C9000D51979 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED404B6420C39C9000D51979 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ED404B6720C39C9000D51979 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED404B6A20C39C9000D51979 /* todov2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = todov2.xcdatamodel; sourceTree = "<group>"; };
 		ED404B6C20C39C9000D51979 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED404B6F20C39C9000D51979 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED404B7120C39C9000D51979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDECE8C020C41155006564AB /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
+		EDECE8C220C411A8006564AB /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		EDECE8C420C43E9B006564AB /* loginResponseStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginResponseStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,15 +84,41 @@
 		ED404B6120C39C9000D51979 /* todov2 */ = {
 			isa = PBXGroup;
 			children = (
-				ED404B6220C39C9000D51979 /* AppDelegate.swift */,
-				ED404B6420C39C9000D51979 /* ViewController.swift */,
-				ED404B6620C39C9000D51979 /* Main.storyboard */,
+				EDECE8BD20C40B68006564AB /* model */,
+				EDECE8BE20C40B75006564AB /* view */,
+				EDECE8BF20C40B7C006564AB /* controller */,
 				ED404B6C20C39C9000D51979 /* Assets.xcassets */,
-				ED404B6E20C39C9000D51979 /* LaunchScreen.storyboard */,
 				ED404B7120C39C9000D51979 /* Info.plist */,
 				ED404B6920C39C9000D51979 /* todov2.xcdatamodeld */,
 			);
 			path = todov2;
+			sourceTree = "<group>";
+		};
+		EDECE8BD20C40B68006564AB /* model */ = {
+			isa = PBXGroup;
+			children = (
+				EDECE8C420C43E9B006564AB /* loginResponseStruct.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		EDECE8BE20C40B75006564AB /* view */ = {
+			isa = PBXGroup;
+			children = (
+				ED404B6E20C39C9000D51979 /* LaunchScreen.storyboard */,
+				ED404B6620C39C9000D51979 /* Main.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		EDECE8BF20C40B7C006564AB /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED404B6220C39C9000D51979 /* AppDelegate.swift */,
+				EDECE8C220C411A8006564AB /* LoginVC.swift */,
+				EDECE8C020C41155006564AB /* DashboardVC.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,10 +200,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-todov2/Pods-todov2-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -221,8 +253,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED404B6B20C39C9000D51979 /* todov2.xcdatamodeld in Sources */,
-				ED404B6520C39C9000D51979 /* ViewController.swift in Sources */,
+				EDECE8C120C41155006564AB /* DashboardVC.swift in Sources */,
+				EDECE8C320C411A8006564AB /* LoginVC.swift in Sources */,
 				ED404B6320C39C9000D51979 /* AppDelegate.swift in Sources */,
+				EDECE8C520C43E9B006564AB /* loginResponseStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
