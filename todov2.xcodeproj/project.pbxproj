@@ -15,7 +15,6 @@
 		ED404B7020C39C9000D51979 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED404B6E20C39C9000D51979 /* LaunchScreen.storyboard */; };
 		EDECE8C120C41155006564AB /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDECE8C020C41155006564AB /* DashboardVC.swift */; };
 		EDECE8C320C411A8006564AB /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDECE8C220C411A8006564AB /* LoginVC.swift */; };
-		EDECE8C520C43E9B006564AB /* loginResponseStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDECE8C420C43E9B006564AB /* loginResponseStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		ED404B7120C39C9000D51979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDECE8C020C41155006564AB /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		EDECE8C220C411A8006564AB /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		EDECE8C420C43E9B006564AB /* loginResponseStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginResponseStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +95,6 @@
 		EDECE8BD20C40B68006564AB /* model */ = {
 			isa = PBXGroup;
 			children = (
-				EDECE8C420C43E9B006564AB /* loginResponseStruct.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -256,7 +253,6 @@
 				EDECE8C120C41155006564AB /* DashboardVC.swift in Sources */,
 				EDECE8C320C411A8006564AB /* LoginVC.swift in Sources */,
 				ED404B6320C39C9000D51979 /* AppDelegate.swift in Sources */,
-				EDECE8C520C43E9B006564AB /* loginResponseStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
