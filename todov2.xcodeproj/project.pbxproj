@@ -82,7 +82,6 @@
 		ED404B6120C39C9000D51979 /* todov2 */ = {
 			isa = PBXGroup;
 			children = (
-				EDECE8BD20C40B68006564AB /* model */,
 				EDECE8BE20C40B75006564AB /* view */,
 				EDECE8BF20C40B7C006564AB /* controller */,
 				ED404B6C20C39C9000D51979 /* Assets.xcassets */,
@@ -90,13 +89,6 @@
 				ED404B6920C39C9000D51979 /* todov2.xcdatamodeld */,
 			);
 			path = todov2;
-			sourceTree = "<group>";
-		};
-		EDECE8BD20C40B68006564AB /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
 			sourceTree = "<group>";
 		};
 		EDECE8BE20C40B75006564AB /* view */ = {

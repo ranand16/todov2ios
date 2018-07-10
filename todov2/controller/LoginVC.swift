@@ -12,23 +12,33 @@ import SwiftyJSON
 
 class LoginVC: UIViewController {
     
-    var parameters: Parameters = ["username":"ranand", "password":"ris"] ;
+    @IBOutlet weak var usernameTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    var parameters: Parameters = [:]
+    var json = JSON()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
     @IBAction func onLoginPressed(_ sender: Any) {
+        parameters = ["username": usernameTF.text, "password": passwordTF.text]
         Alamofire.request("http://localhost:3000/api/login", method: .post, parameters: parameters, encoding: URLEncoding.httpBody).responseJSON { response in
-            let json = JSON(response.result.value!)
-            print(json)
-            if(json["code"].exists()){
+            
+            self.json = JSON(response.result.value!)
+            print(self.json)
+            if(self.json["code"].exists()){
                 print("wrong!!")
             }else{
                 self.performSegue(withIdentifier: "toDashboard", sender: self)
             }
-            
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "toDashboard"){
+            let destination = segue.destination as! DashboardVC
+            destination.userJson = json
         }
     }
 }
